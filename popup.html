@@ -1,0 +1,31 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+body{width:250px;margin:0;padding:14px;font:13px system-ui;background:#1b1b1b;color:#eee}
+h4{margin:0 0 6px;font-size:11px;color:#999;font-weight:500}
+select{width:100%;padding:7px;border:0;border-radius:6px;background:#2a2a2a;color:#eee;
+       font-size:12px;margin-bottom:12px}
+label{display:flex;align-items:center;gap:7px;font-size:12px;margin-bottom:12px;color:#ccc}
+button{width:100%;padding:10px;border:0;border-radius:6px;background:#2f6fd0;color:#fff;
+       font-size:13px;cursor:pointer}
+button.stop{background:#c92a2a}
+#msg{margin-top:10px;font-size:11px;color:#9a9a9a;min-height:15px;word-break:break-all}
+</style></head><body>
+<h4>음성 언어</h4>
+<select id="lang">
+  <option value="ja">일본어</option>
+  <option value="en">영어</option>
+  <option value="zh">중국어</option>
+  <option value="ko">한국어</option>
+</select>
+<h4>자막 길이</h4>
+<select id="chunk">
+  <option value="3">3초 (반응 빠름)</option>
+  <option value="5" selected>5초 (권장)</option>
+  <option value="8">8초 (정확도 높음)</option>
+</select>
+<label><input type="checkbox" id="tr" checked> 한국어로 번역</label>
+<button id="go">자막 시작</button>
+<div id="msg"></div>
+<script src="popup.js"></script>
+</body></html>

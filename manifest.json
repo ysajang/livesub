@@ -1,0 +1,10 @@
+{
+  "manifest_version": 3,
+  "name": "Live Subtitle (Local)",
+  "version": "1.0",
+  "description": "탭 오디오를 로컬 서버로 전사·번역해 자막으로 표시",
+  "permissions": ["tabCapture", "storage", "offscreen", "activeTab", "scripting"],
+  "host_permissions": ["http://127.0.0.1:8765/*"],
+  "background": { "service_worker": "background.js" },
+  "action": { "default_popup": "popup.html", "default_title": "Live Subtitle" }
+}
